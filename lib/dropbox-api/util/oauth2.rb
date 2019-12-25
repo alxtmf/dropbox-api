@@ -1,5 +1,6 @@
 module Dropbox
   module API
+    
     module OAuth2
 
       class << self
