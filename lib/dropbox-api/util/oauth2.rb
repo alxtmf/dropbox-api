@@ -19,19 +19,19 @@ module Dropbox
         end
       end
 
-      module AuthFlow
-        def self.start
-          OAuth2.consumer(:authorize).authorize_url({
-            client_id: Dropbox::API::Config.app_key,
-            response_type: 'code'
-          })
-        end
+      #module AuthFlow
+      #  def self.start
+      #    OAuth2.consumer(:authorize).authorize_url({
+      #      client_id: Dropbox::API::Config.app_key,
+      #      response_type: 'code'
+      #    })
+      #  end
 
         # Exchanges code for a token
-        def self.finish(code)
-          OAuth2.consumer(:main).auth_code.get_token(code)
-        end
-      end
+      # def self.finish(code)
+      #    OAuth2.consumer(:main).auth_code.get_token(code)
+      #  end
+      #end
     end
   end
 end
